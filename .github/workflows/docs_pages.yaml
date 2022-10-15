@@ -1,0 +1,51 @@
+name: docs_pages_render
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build_docs_job:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_PAT: $ {{ secrets.GITHUB_TOKEN }}
+
+    steps: 
+      - name: check out branch
+        uses: actions/setup-python@v2.2.1
+        with:
+          python-version: 3.9
+      
+      - name: Install dependencies
+        run: |
+          python pip install sphinx
+          python pip install myst-parser
+          python pip install sphinx_togglebutton
+          python pip install sphinx-copybutton
+
+      - name: Render HTML
+        run:
+          sphinx-build -b html docs/ docs/_build
+
+      - name: Set up temporary repository and commit to HTML files
+        run: 
+          cd docs/_build
+          git init
+          touch .nojekyll
+          git add .
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+
+      - name: Push rendered HTML to destination branch
+        uses: ad-m/githb-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./docs/_build
+          
+
+    
