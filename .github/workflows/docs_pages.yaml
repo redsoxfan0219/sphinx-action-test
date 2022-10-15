@@ -27,7 +27,7 @@ jobs:
 
       - name: Render HTML
         run:
-          sphinx-build -b html . _build/
+          sphinx-build -b html ./ ./_build/
 
       - name: Set up temporary repository and commit to HTML files
         run: 
