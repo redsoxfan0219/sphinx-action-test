@@ -20,10 +20,10 @@ jobs:
       
       - name: Install dependencies
         run: |
-          python pip install sphinx
-          python pip install myst-parser
-          python pip install sphinx_togglebutton
-          python pip install sphinx-copybutton
+          python -m pip install sphinx
+          python -m pip install myst-parser
+          python -m pip install sphinx_togglebutton
+          python -m pip install sphinx-copybutton
 
       - name: Render HTML
         run:
