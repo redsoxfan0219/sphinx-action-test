@@ -31,8 +31,6 @@ release = '1.0.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.est.mathjax",
-    "sphinx.est.viewcode",
     "sphinx_togglebutton",
     "sphinx_copybutton"
     "myst_parser"
