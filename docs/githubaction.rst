@@ -1,5 +1,5 @@
-Overview of GitHub Actions
-==========================
+GitHub Actions in Docs-as-Code 
+==============================
 
 *Page written in reStructuredText*
 
@@ -11,7 +11,7 @@ The purpose of static site generators is two-fold:
 - To allow uses to write in a simple, lightweight markup language (typically Markdown or reStructuredText)
 - To render that simple markup text into attractive, stylized HTML files
 
-The beauty of static site generators is that, after some initial setup, that process is reduced to a single command line statement, like the one I use to build the HTML for this site:
+The beauty of static site generators is that, after some initial setup, the process is reduced to a single command line statement, like the one I use to build the HTML for this site on my local machine:
 
 ::
 
@@ -24,11 +24,13 @@ Shortcoming of Static Site Generators
 
 While convenient in many ways, static site generators are not perfect on their own.
 
-For example, imagine you are building a documentation template that will be used by a large team. You want everyone to write in the Markdown or reStructuredText files you've built, and you want everyone to render those files into HTML when finished, and finally you want them to host those HTML files as a GitHub Pages site that is attached to their code repository.
+For example, imagine you are building a documentation template that will be used by a large team. You want everyone to write in the Markdown or reStructuredText files you've built, and you want everyone to render those files into HTML when finished. Finally, you want them to host those HTML files as a GitHub Pages site that is attached to their code repository.
 
 You're not worried about the team writing in Markdown. But you don't want to worry about everyone rendering the files into HTML, a process many of them may be unfamiliar with. What if they don't remember to add the rendered files into the correct output destination? What if they forget to add that required ``-b`` flag? 
 
-Most of all, you want to make *your* life easier. If someone screws up something in the above, that person's coming to you with an issue. An issue that you don't have time to worry about.
+If someone screws up something in the above, that person's coming to you with an issue. An issue that you don't have time to worry about. 
+
+As a technical writer, you want to support your team, but you also want to make *your* life easier, too. Every time you ask others to perform manual processes, you're introducing a risk that others will come to you for help with those processes. How can you minimize the chances of that happening, allowing you to focus on more important tasks?
 
 GitHub Actions, a CI/CD Tool
 ----------------------------
@@ -39,7 +41,7 @@ The answer is `GitHub Actions <https://github.com/features/actions>`_.
 
 Introduced a few years back, GitHub Actions is a mechanism that can be used to automate workflows. It's grown to become a key function for many teams' `continuous integration, continuous deployment (CI/CD) <https://www.redhat.com/en/topics/devops/what-is-ci-cd>`_. 
 
-Under the hood, GitHub Actions works by receiving directions you write in a ``.yml`` file, which you post within your code repository under a ``./.github/workflows`` subdirectory. This file provides instructions for instantiating and directing a virtual machine.
+Under the hood, GitHub Actions works by receiving directions you write in a ``.yml`` file, which you post within your code repository under a ``./.github/workflows`` subdirectory. This file provides instructions for instantiating and directing a `virtual machine <https://www.vmware.com/topics/glossary/content/virtual-machine.html>`_.
 
 Using a GitHub Action in Docs-as-Code Deployment
 ------------------------------------------------ 
