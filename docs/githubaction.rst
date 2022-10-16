@@ -89,7 +89,7 @@ jobs:
 
       - name: Set up temporary repository and commit to HTML files
         run: |
-          cd _build
+          cd docs/_build
           git init
           touch .nojekyll
           git add .
