@@ -72,7 +72,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Python in the VM
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.10
       
