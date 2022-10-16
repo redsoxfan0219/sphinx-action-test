@@ -8,7 +8,7 @@ on:
 jobs:
 
   build_docs_job:
-    runs-on: ubuntu 18.04
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: $ {{ secrets.GITHUB_TOKEN }}
 
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python in the VM
         uses: actions/setup-python@v2.2.1
         with:
-          python-version: 3.4
+          python-version: 3.9
       
       - name: Install dependencies
         run: |
