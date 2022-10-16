@@ -69,12 +69,12 @@ jobs:
 
     steps: 
       - name: Check out the main branch to the VM
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
 
       - name: Set up Python in the VM
-        uses: actions/setup-python@v2.2.1
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.10
       
       - name: Install dependencies
         run: |
@@ -110,7 +110,7 @@ Here are the steps performed as a result of the ``.yml`` file above:
 
 2. The VM checks out the ``main`` branch of the repository.
 
-3. The VM sets up Python v3.9.
+3. The VM sets up Python v3.10.
 
 4. The VM downloads (via ``pip``) all necessary dependencies to build the HTML files.
 
