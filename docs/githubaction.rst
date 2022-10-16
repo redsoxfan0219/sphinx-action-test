@@ -69,7 +69,7 @@ jobs:
 
     steps: 
       - name: Check out the main branch to the VM
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2.3.4
 
       - name: Set up Python in the VM
         uses: actions/setup-python@v2.2.1
