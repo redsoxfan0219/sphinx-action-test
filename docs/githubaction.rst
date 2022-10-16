@@ -88,7 +88,7 @@ jobs:
           sphinx-build -b html docs/ docs/_build
 
       - name: Set up temporary repository and commit to HTML files
-        run: 
+        run: |
           cd _build
           git init
           touch .nojekyll
