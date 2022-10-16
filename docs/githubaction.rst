@@ -79,6 +79,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install sphinx
+          python -m pip install furo
           python -m pip install myst-parser
           python -m pip install sphinx_togglebutton
           python -m pip install sphinx-copybutton
