@@ -43,8 +43,8 @@ Introduced a few years back, GitHub Actions is a mechanism that can be used to a
 
 Under the hood, GitHub Actions works by receiving directions you write in a ``.yml`` file, which you post within your code repository under a ``./.github/workflows`` subdirectory. This file provides instructions for instantiating and directing a `virtual machine <https://www.vmware.com/topics/glossary/content/virtual-machine.html>`_.
 
-Using a GitHub Action in Docs-as-Code Deployment
------------------------------------------------- 
+Using a GitHub Action in a Docs-as-Code Deployment
+--------------------------------------------------
 
 For our purposes, GitHub Actions is valuable because it can be used to automate the HTML build process and commit that content to your GitHub repository.
 
