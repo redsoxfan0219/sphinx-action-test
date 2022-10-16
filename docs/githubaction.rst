@@ -28,8 +28,6 @@ For example, imagine you are building a documentation template that will be used
 
 You're not worried about the team writing in Markdown. But you don't want to worry about everyone rendering the files into HTML, a process many of them may be unfamiliar with. What if they don't remember to add the rendered files into the correct output destination? What if they forget to add that required ``-b`` flag? 
 
-If someone screws up something in the above, that person's coming to you with an issue. An issue that you don't have time to worry about. 
-
 As a technical writer, you want to support your team, but you also want to make *your* life easier, too. Every time you ask others to perform manual processes, you're introducing a risk that others will come to you for help with those processes. How can you minimize the chances of that happening, allowing you to focus on more important tasks?
 
 GitHub Actions, a CI/CD Tool
