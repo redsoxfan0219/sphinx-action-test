@@ -12,8 +12,10 @@ jobs:
     env: 
       GITHUB_PAT: $ {{ secrets.GITHUB_TOKEN }}
 
-    steps: 
-      - name: check out branch
+      - name: Check out the main branch to the VM
+        uses: actions/checkout@v2.3.4
+
+      - name: Set up Python in the VM
         uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.9

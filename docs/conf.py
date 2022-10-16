@@ -17,13 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx-Action-Test'
+project = 'Ben Barksdale Demo Sphinx'
 copyright = '2022, Ben Barksdale'
 author = 'Ben Barksdale'
 
-# The full version, including alpha/beta/rc tags
-release = '1.0.0.0'
-
+# The full version, including alpha/beta/rc tags    
 
 # -- General configuration ---------------------------------------------------
 
@@ -32,7 +30,7 @@ release = '1.0.0.0'
 # ones.
 extensions = [
     "sphinx_togglebutton",
-    "sphinx_copybutton"
+    "sphinx_copybutton",
     "myst_parser"
 ]
 
