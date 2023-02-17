@@ -1,7 +1,7 @@
-name: This is an example
-
-on: [pull_request]
-
+name: dump_context
+on: 
+  push:
+    branches: main
 jobs:
   one:
     runs-on: ubuntu-latest
